@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aqui vai a doc dessa API
 
-Things you may want to cover:
+API criada com RAILS 6 e RUBY 3
 
-* Ruby version
+API de exemplo aqui sera uma API de nomes de super herois
 
-* System dependencies
+PASSO A PASSO ->
 
-* Configuration
+1 Criar projeto com o comando -> rails new nome_projeto --api
+esse comando cria um projeto completo Rails voltado para API Backend, nao criando arquivos desnecessarios de front
 
-* Database creation
+2 LInkar projeto ao seu repositorio online
 
-* Database initialization
+3  Rodar o comando para criar sua primeira MIGRATION -> Criar tabelas
+    rails g scaffold NOME_TABELA name:string
+ para tornar um campo da tabela obrigario (NOT NULL) ir ate a migrate gerada e adicionar ao codigo , null: false
 
-* How to run the test suite
+4 Criar banco de dados
+o RAILS cria de forma automatica o DB TESTER e o DB DEV, entao é so rodar -> rails db:create
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5 Rodar sua migration criada no passo 3 para popular seu banco recem criado
+comando -> rails db:migrate
