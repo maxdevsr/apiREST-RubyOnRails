@@ -3,7 +3,7 @@ class Api::HeroesController < ApplicationController
 
   # GET /heroes
   def index
-    @heroes = Hero.all
+    @heroes = Hero.search(params[:term])
 
     render json: @heroes
   end
